@@ -1,0 +1,27 @@
+{
+  "name": "todo-exploder",
+  "version": "1.0.8",
+  "description": "TODO Exploder",
+  "main": "dist/index.html",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --no-source-maps index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "Aryan Sawhney",
+  "license": "MIT",
+  "dependencies": {
+    "@logseq/libs": "0.0.2"
+  },
+  "logseq": {
+    "id": "todo-exploder",
+    "title": "TODO Exploder",
+    "icon": "./icon.png"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  }
+}
