@@ -1,6 +1,35 @@
 import '@logseq/libs';
+import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user';
 import explode from './exploder';
+
+let settings: SettingSchemaDesc[] = [
+  {
+    key: 'explosionColor1',
+    type: 'string',
+    default: '#e7798e',
+    title: 'Color 1 of the explosion',
+    description: 'Color 1 of the explosion',
+    inputAs: 'color'
+  },
+  {
+    key: 'explosionColor2',
+    type: 'string',
+    default: '#64cafa',
+    title: 'Color 2 of the explosion',
+    description: 'Color 2 of the explosion',
+    inputAs: 'color'
+  },
+  {
+    key: 'explosionColor3',
+    type: 'string',
+    default: '#9cfc64',
+    title: 'Color 3 of the explosion',
+    description: 'Color 3 of the explosion',
+    inputAs: 'color'
+  },
+]
 const main = async () => {
+  logseq.useSettingsSchema(settings);
   logseq.App.onRouteChanged(
     (route) => {
       addListenersToTasks()
