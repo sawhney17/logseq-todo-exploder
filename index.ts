@@ -30,6 +30,7 @@ let settings: SettingSchemaDesc[] = [
 ]
 const main = async () => {
   logseq.useSettingsSchema(settings);
+  addListenersToTasks()
   logseq.App.onRouteChanged(
     (route) => {
       addListenersToTasks()
