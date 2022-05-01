@@ -32,16 +32,14 @@ const main = async () => {
   logseq.useSettingsSchema(settings);
   addListenersToTasks()
   logseq.App.onRouteChanged(
-    (route) => {
+    () => {
       addListenersToTasks()
     }
   )
 
     function addListenersToTasks(){
-      console.log("hi")
       const elements = Array.from(top.document.getElementsByClassName("form-checkbox"))
       elements.forEach(element => {
-        console.log(element)
         function listenCarefully(e: any) {
           const coordinates = getPosition(element)
           explode(coordinates.x, coordinates.y)
